@@ -11,7 +11,7 @@ ENV PYTHONFAULTHANDLER=1 \
 RUN groupadd user && useradd --create-home --home-dir /home/user -g user user
 
 # Install system dependencies
-RUN apt-get update && apt-get install python3-dev gcc build-essential libpq-dev -y
+RUN apt-get update && apt-get install python3-dev gcc build-essential libpq-dev curl -y
 
 # Download the latest installer
 ADD https://astral.sh/uv/install.sh /uv-installer.sh
@@ -24,13 +24,13 @@ ENV PATH="/root/.local/bin/:$PATH"
 
 # Install python dependencies
 COPY pyproject.toml uv.lock /home/user/app/
+WORKDIR /home/user/app
 RUN uv sync --frozen
 
 # Copy backend files
 WORKDIR /home/user/app/backend
 COPY backend/ /home/user/app/backend
 
-USER user
 
 # Start django
 CMD uv run python manage.py makemigrations --noinput && \
@@ -38,3 +38,4 @@ uv run python manage.py migrate --noinput && \
 uv run python manage.py collectstatic --no-input && \
 uv run python manage.py create_superuser_if_not_exists && \
 uv run uvicorn backend.asgi:application --host 0.0.0.0 --port 8000 --reload
+

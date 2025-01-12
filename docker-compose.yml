@@ -4,7 +4,7 @@ services:
     environment:
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=user_password
-      - POSTGRES_DB=sample_db
+      - POSTGRES_DB=template_db
     ports:
       - "5432:5432"
     volumes:
@@ -23,7 +23,6 @@ services:
     depends_on:
       - db
 
-  volumes:
-    db_data:
-      name: db_data
-      external: true
+volumes:
+  db_data:
+    name: db_data
