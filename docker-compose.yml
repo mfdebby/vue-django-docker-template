@@ -1,0 +1,29 @@
+services:
+  db:
+    image: "postgres:alpine"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=user_password
+      - POSTGRES_DB=sample_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data:delegated
+  
+  backend:
+    build:
+      dockerfile: docker/Dockerfile.backend
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/home/user/app/
+    env_file: backend/.env
+    restart: on-failure:5
+    depends_on:
+      - db
+
+  volumes:
+    db_data:
+      name: db_data
+      external: true

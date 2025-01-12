@@ -1,0 +1,22 @@
+[project]
+name = "django-docker-template"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dj-database-url>=2.3.0",
+    "django>=5.1.4",
+    "loguru>=0.7.3",
+    "psycopg2-binary>=2.9.10",
+    "python-decouple>=3.8",
+    "uvicorn>=0.34.0",
+]
+
+[dependency-groups]
+dev = [
+    "black>=24.10.0",
+    "isort>=5.13.2",
+    "mypy>=1.14.1",
+    "ruff>=0.9.1",
+]
