@@ -1,7 +1,8 @@
 from decouple import config
+from django.contrib.auth.models import User
 from django.core.management.base import BaseCommand
 from loguru import logger
-from django.contrib.auth.models import User
+
 
 class Command(BaseCommand):
     help = "Create a superuser if one does not exist"
