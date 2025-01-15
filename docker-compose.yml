@@ -17,7 +17,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./:/home/user/app/
+      - ./backend/:/app/
     env_file: backend/.env
     restart: on-failure:5
     depends_on:
