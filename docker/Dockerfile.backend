@@ -12,15 +12,17 @@ RUN sh /uv-installer.sh && rm /uv-installer.sh
 # Ensure the installed binary is on the `PATH`
 ENV PATH="/root/.local/bin/:$PATH"
 
+# Copy and install dependencies
 COPY pyproject.toml uv.lock  . 
 RUN uv sync --frozen --no-install-project
-
 WORKDIR /app
+
+# Copy backend codes
 COPY backend/ /app
 
 # Start django
 CMD uv run python manage.py makemigrations --noinput && \
-uv run python manage.py migrate --noinput && \
-uv run python manage.py collectstatic --no-input && \
-uv run python manage.py create_superuser_if_not_exists && \
-uv run uvicorn core.asgi:application --host 0.0.0.0 --port 8000 --reload
+  uv run python manage.py migrate --noinput && \
+  uv run python manage.py collectstatic --no-input && \
+  uv run python manage.py create_superuser_if_not_exists && \
+  uv run uvicorn core.asgi:application --host 0.0.0.0 --port 8000 --reload
