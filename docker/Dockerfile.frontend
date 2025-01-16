@@ -1,0 +1,22 @@
+FROM node:18-alpine
+
+# Set the working directory
+WORKDIR /app
+
+# Install pnpm globally
+RUN npm install -g pnpm
+
+# Copy package.json and pnpm-lock.yaml files
+COPY package.json pnpm-lock.yaml ./
+
+# Install dependencies using pnpm
+RUN pnpm install
+
+# Copy the rest of the application files
+COPY . ./
+
+# Expose port 5173 (assuming that's where the app runs)
+EXPOSE 5173
+
+# Run the dev command
+CMD ["pnpm", "run", "dev"]
