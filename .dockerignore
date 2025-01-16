@@ -1,0 +1,5 @@
+.python-version
+.venv
+dockerfiles
+docker-compose.yml
+node_modules
