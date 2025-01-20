@@ -9,15 +9,19 @@
 </p>
 
 <p align="center">
-  <a href="#installation">Installation</a>
+  <a href="#installation">Prerequisites</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#test">Test</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#acknowledgement">Acknowledgement</a>
 </p>
 
-## Installation
+## Prerequisites
+1. [uv](https://docs.astral.sh/uv/)
+2. [pnpm](https://pnpm.io/)
+3. [Docker](https://www.docker.com/)
 
+## Installation
 ```console
 # clone repo
 git git@github.com:freshstartagain/portfolio.git
