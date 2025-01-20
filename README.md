@@ -12,8 +12,6 @@
   <a href="#installation">Prerequisites</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#test">Test</a>
-  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#acknowledgement">Acknowledgement</a>
 </p>
 
 ## Prerequisites
@@ -24,25 +22,17 @@
 ## Installation
 ```console
 # clone repo
-git git@github.com:freshstartagain/portfolio.git
+git@github.com:mfwaltzfordebby/vue-django-docker-template.git
 
 # change directory
-cd portfolio
+cd vue-django-docker-template 
 
-# install dependencies
-yarn install
+# setup backend .env 
+cp backend/.env.example backend/.env
 
-# run dev server
-yarn run dev
+# rename template django app
+mv backend/template_app backend/<app_name>
+
+# install new app 
+replace `template_app` with the new `<app_name>` in the `INSTALLED_APPS` list inside the Django `settings.py`.
 ```
-
-## Test
-```console
-# run test
-yarn jest
-```
-
-# Acknowledgement
-
-My inspiration for this project was the [tutorial](https://www.youtube.com/watch?v=b0pkpcD8Ms4) by ForrestKnight on YouTube.
-His repository on GitHub can be found [here](https://github.com/ForrestKnight/minimal-portfolio).
