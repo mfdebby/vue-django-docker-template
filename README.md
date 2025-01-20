@@ -9,9 +9,11 @@
 </p>
 
 <p align="center">
-  <a href="#installation">Prerequisites</a>
+  <a href="#prerequisites">Prerequisites</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#test">Installation</a>
+  <a href="#installation">Installation</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#command-snippets">Command Snippets</a>
 </p>
 
 ## Prerequisites
@@ -35,4 +37,16 @@ mv backend/template_app backend/<app_name>
 
 # install new app 
 replace `template_app` with the new `<app_name>` in the `INSTALLED_APPS` list inside the Django `settings.py`.
+```
+
+## Command Snippets
+```console
+# build containers
+make dev-run
+
+# lint codes BE
+make lint-backend
+
+# lint codes FE
+make lint-frontend
 ```
