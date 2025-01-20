@@ -11,7 +11,7 @@
 <p align="center">
   <a href="#installation">Prerequisites</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#test">Test</a>
+  <a href="#test">Installation</a>
 </p>
 
 ## Prerequisites
