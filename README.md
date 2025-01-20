@@ -3,15 +3,9 @@
   <span>Template for building an app using Vue 3, Django, and Docker.</span>
   <br>
   <br>
-  <a href="https://reactjs.org/" title="Vue3">
-    <img src="https://img.shields.io/badge/Vue-3-green">
-  </a>
-  <a href="https://www.djangoproject.com/" title="Django">
-    <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green">
-    <a  href="https://vitejs.dev/" title="Vite">
-  </a>
-    <img src="https://img.shields.io/badge/-Vite-yellowgreen">
-  </a>
+  <img alt="Vue" src="https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D">
+  <img alt="Django" src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white">
+  <img alt="Docker" src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)">
 </p>
 
 <p align="center">
