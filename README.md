@@ -20,6 +20,7 @@
 1. [uv](https://docs.astral.sh/uv/)
 2. [pnpm](https://pnpm.io/)
 3. [Docker](https://www.docker.com/)
+4. Unix or Linux OS
 
 ## Installation
 ```console
