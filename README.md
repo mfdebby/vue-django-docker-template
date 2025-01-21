@@ -29,7 +29,7 @@
 ## Installation
 ```console
 # clone repo
-git@github.com:mfwaltzfordebby/vue-django-docker-template.git
+git@github.com:mfdebby/vue-django-docker-template.git
 
 # change directory
 cd vue-django-docker-template 
