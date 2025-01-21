@@ -1,6 +1,6 @@
 <h3 align=center>Vue3 + Django + Docker Template</h3>
 <p align=center>
-  <span>Template for building an app using Vue 3, Django, and Docker.</span>
+  <span>Boilerplate for building an app using Vue 3, Django, and Docker.</span>
   <br>
   <br>
   <img alt="Vue" src="https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D">
