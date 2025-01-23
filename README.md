@@ -38,10 +38,10 @@ cd vue-django-docker-template
 cp backend/.env.example backend/.env
 
 # rename template django app
-mv backend/template_app backend/<app_name>
+mv backend/sample_app backend/<app_name>
 
 # install new app 
-replace `template_app` with the new `<app_name>` in the `INSTALLED_APPS` list inside the Django `settings.py`.
+replace `sample_app` with the new `<app_name>` in the `INSTALLED_APPS` list inside the Django `settings.py`.
 ```
 
 ## Command Snippets
